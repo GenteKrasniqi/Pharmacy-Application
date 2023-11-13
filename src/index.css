@@ -1,0 +1,8 @@
+.custom-menu{
+  margin-right: 40px;
+}
+
+.custom-menu .menu-item {
+  font-size: 17px; /* Adjust the font size as needed */
+  margin-right: 35px;
+}
