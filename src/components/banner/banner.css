@@ -1,0 +1,50 @@
+.contentHolder {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .contentHolder .imgHolder {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .imgHolder img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+  
+  .txtHolder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    color: rgb(0, 128, 49);
+    z-index: 1;
+  }
+  
+  .txtHolder h3 {
+    white-space: nowrap;
+    font-size: 52px;
+    padding-bottom: 10px;
+  }  
+  .txtHolder h6 {
+    font-size: 24px; 
+    color: white; 
+    margin-top: 0; 
+    animation: fadeIn 1.5s ease-in-out forwards; 
+  }
+  
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

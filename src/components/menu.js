@@ -21,10 +21,10 @@ function Menu() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto custom-menu">
             <Nav.Link href="/" className='menu-item'>Home</Nav.Link>
-            <Nav.Link href="/shop" className='menu-item'>About</Nav.Link>
-            <Nav.Link href="/shop" className='menu-item'>Products</Nav.Link>
-            <Nav.Link href="/shop" className='menu-item'>Pharmacist</Nav.Link>
-            <Nav.Link href="/shop" className='menu-item'>Contact Us</Nav.Link>
+            <Nav.Link href="/about-us" className='menu-item'>About Us</Nav.Link>
+            <Nav.Link href="/products" className='menu-item'>Products</Nav.Link>
+            <Nav.Link href="/staff" className='menu-item'>Staff</Nav.Link>
+            <Nav.Link href="/contact-us" className='menu-item'>Contact Us</Nav.Link>
             {/* <Nav.Link href="/cart">Cart ({cart.length})</Nav.Link> */}
             <NavDropdown className='menu-item' title={(isLoggedIn == null) ? 'Guest' : isLoggedIn.email} id="basic-nav-dropdown">
               {
