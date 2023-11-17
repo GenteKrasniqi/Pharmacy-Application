@@ -35,7 +35,7 @@ function About() {
 
   const ServicesStyle ={
     marginTop: '210px',
-    order: 3,
+    // order: 3,
   }
 
   const srvstyle = {
