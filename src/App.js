@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <Menu />
         <Routes />
+        <Footer/>
     </div>
   );
 

@@ -1,4 +1,4 @@
-import './banner.css';
+import '../../src/index.css';
 
 const Banner = ({ img, h3, altAttr,h6 }) => {
     return (

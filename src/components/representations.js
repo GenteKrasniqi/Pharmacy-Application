@@ -9,6 +9,7 @@ function Representations() {
                 <div className="imgBox"><img src={LaRocheLogo} alt="Image1" /></div>
                 <div className="imgBox"><img src={LaRocheLogo} alt="Image2" /></div>
                 <div className="imgBox"><img src={LaRocheLogo} alt="Image3" /></div>
+                <div className="imgBox"><img src={LaRocheLogo} alt="Image3" /></div>
             </div>
         </div>
 
