@@ -76,7 +76,7 @@
 }
 
 .slider-text h5 {
-  color:  rgb(0, 128, 49);
+  color: rgb(0, 128, 49);
   font-size: 32px;
 }
 
@@ -149,8 +149,7 @@
 
 .minBanner {
   margin-top: 50px;
-  margin-left: 95px;
-  text-align: start;
+  text-align: center;
   color: rgb(0, 128, 49);
 }
 
@@ -205,11 +204,13 @@
     opacity: 1;
   }
 }
-.contantPharms{
+
+.contantPharms {
   text-align: center;
   padding: 90px;
 }
-.contantPharms p{
+
+.contantPharms p {
   margin-right: 30px;
   color: rgb(0, 128, 49);
 }
