@@ -9,9 +9,9 @@ const Footer = () => {
     <footer className="bg-light text-dark">
       <Container>
         <Row className="py-4">
-          <Col md={6} className="text-center">
+          <Col md={5} className="text-center mt-5">
             <h5>Pharm Store</h5>
-            <p>Pharm Store, where health and care meet excellence. Dedicated to providing high-quality pharmaceutical products and personalized service to community. Your well-being is our top priority.</p>
+            
           </Col>
           <Col md={3} className="text-center">
             <h5>Quick Links</h5>
