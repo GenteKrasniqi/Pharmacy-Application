@@ -1,6 +1,7 @@
 import '../../src/index.css';
+import Button from '../components/button';
 
-const Banner = ({ img, h3, altAttr,h6 }) => {
+const Banner = ({ img, h3, altAttr, h6, title }) => {
     return (
         <div className="contentHolder">
             <div className="imgHolder">
@@ -8,7 +9,8 @@ const Banner = ({ img, h3, altAttr,h6 }) => {
             </div>
             <div className="txtHolder">
                 <h3>{h3}</h3>
-                <h6>{h6}</h6>                
+                <h6>{h6}</h6>
+                <Button title={title}/>
             </div>
         </div>
     )

@@ -1,7 +1,7 @@
 import React from 'react'
 import pharmacy from '../assets/img/aboutusimg.jpg'
 import Services from '../components/Services'
-
+import Button from '../components/button';
 
 function About() {
 
@@ -55,6 +55,7 @@ function About() {
           <p style={text}>About Us</p>
           <p style={textStyle}>Pharm Store, the place where we prioritize your well-being. Offering a diverse range of quality medications and personalized care, we are committed to enhancing your life through accessible and reliable healthcare solutions. Trust us for a healthier, happier tomorrow with compassionate service and professional advice.</p>
           <i class="bi bi-facebook"></i>
+          <Button title={'Contact >'}/>
         </div>
       </div>
       {/* Include the Services component */}

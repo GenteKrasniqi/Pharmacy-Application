@@ -23,14 +23,13 @@ function Menu() {
             <Nav.Link href="/" className='menu-item'>Home</Nav.Link>
             <Nav.Link href="/About" className='menu-item'>About Us</Nav.Link>
             <Nav.Link href="/products" className='menu-item'>Products</Nav.Link>
-            <Nav.Link href="/staff" className='menu-item'>Staff</Nav.Link>
             <Nav.Link href="/contact-us" className='menu-item'>Contact Us</Nav.Link>
             {/* <Nav.Link href="/cart">Cart ({cart.length})</Nav.Link> */}
-            <NavDropdown className='menu-item' title={(isLoggedIn == null) ? 'Guest' : isLoggedIn.email} id="basic-nav-dropdown">
+            <NavDropdown className='menu-item' title={(isLoggedIn == null) ? 'User' : isLoggedIn.email} id="basic-nav-dropdown">
               {
                 (isLoggedIn == null) ? <>
-                  <NavDropdown.Item href="/login">Login</NavDropdown.Item>
-                  <NavDropdown.Item href="/register">Register</NavDropdown.Item>
+                <NavDropdown.Item href="/register">Register</NavDropdown.Item>
+                  <NavDropdown.Item href="/login">Login</NavDropdown.Item>                  
                 </> : <>
                   <NavDropdown.Item href="/dashboard">Dashboard</NavDropdown.Item>
                   <NavDropdown.Divider />

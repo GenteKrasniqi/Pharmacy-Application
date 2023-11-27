@@ -7,13 +7,17 @@ import "../../src/index.css";
 const Footer = () => {
   return (
     <footer className="bg-light text-dark">
-      <Container>
-        <Row className="py-4">
-          <Col md={5} className="text-center mt-5">
-            <h5>Pharm Store</h5>
-            
+      <Container
+        style={{ minHeight: '300px', maxWidth: '1200px' }}
+        className="d-flex flex-column justify-content-center align-items-center"
+      >
+        <Row className="py-3" style={{ width: '100%' }}>
+          <Col md={4} className="text-center mt-5">
+            {/* Adjusted column size to md={4} */}
+            <h5><Link to="/" style={{ color: 'black', textDecoration: 'none' }}>Pharm Store</Link></h5>
           </Col>
-          <Col md={3} className="text-center">
+          <Col md={4} className="text-center">
+            {/* Adjusted column size to md={4} */}
             <h5>Quick Links</h5>
             <ul className="list-unstyled footer-links">
               <li>
@@ -30,10 +34,10 @@ const Footer = () => {
               </li>
             </ul>
           </Col>
-          <Col md={3} className="text-center">
-            <h5>Contact</h5>
+          <Col md={4} className="text-center">
+            <h5 style={{ marginBottom: '20px' }}>Contact</h5>
             <p>Email: info@pharmstore.com</p>
-            <p>Phone: (123) 456-7890</p>            
+            <p>Phone: (123) 456-7890</p>
           </Col>
         </Row>
       </Container>

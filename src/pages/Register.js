@@ -7,7 +7,7 @@ function Register() {
       <div >
         <div style={{textAlign:"center"}} class='mt-5'>
         <h3>Welcome to Pharm Store, User!</h3>
-        <h5>Register to our Application here</h5></div>
+        <h5 class='mb-3'>Please Register to our Application here</h5></div>
     <div class="form-row"  >
       <div class="col-md-4  mb-3" style={{ width:"100%"}}>
         <label for="validationServer01">First name</label>
@@ -69,7 +69,7 @@ function Register() {
         </div>
       </div>
     </div>
-    <button class="btn btn-success " type="submit">Submit form</button>
+    <button class="btn btn-success " type="submit">Submit</button>
   </div></div>
   )
 }
