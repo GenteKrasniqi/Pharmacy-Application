@@ -15,6 +15,7 @@ const Routes = () => {
            <Route path="/products" element={<Products />} />
            <Route path="/login" element={<Login />} />
            <Route path="/register" element={<Register />} />
+
         </Switch>        
     );
 }
