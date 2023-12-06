@@ -4,6 +4,7 @@ import BannerImage from "../assets/img/banner.jpg";
 import Slider from '../components/Slider';
 import Representations from '../components/representations';
 import Button from '../components/button';
+import Faq from '../components/Faq';
 import '../../src/index.css'
 
 function Home() {
@@ -32,9 +33,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-
-   
-
+                        <Faq />
         </div>
     );
 }
