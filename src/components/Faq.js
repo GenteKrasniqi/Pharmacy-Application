@@ -57,7 +57,7 @@ const Faq = () => {
       <div className="container">
         <div className="containerFaq">
           <div className="containerFaqInside">
-            <h1>Read Frequently Asked Questions</h1>
+            <h1>Please refer to this Accordion to Read the Frequently Asked Questions</h1>
 
             {questions.length ?
               questions.map((item, index) => {
