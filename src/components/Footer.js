@@ -27,7 +27,7 @@ const Footer = () => {
                 <Link to="/about-us">About</Link>
               </li>
               <li>
-                <Link to="/products">Services</Link>
+                <Link to="/products">Products</Link>
               </li>
               <li>
                 <Link to="/register">Register</Link>
@@ -37,7 +37,7 @@ const Footer = () => {
           <Col md={4} className="text-center">
             <h5 style={{ marginBottom: '20px' }}>Contact</h5>
             <p>Email: info@pharmstore.com</p>
-            <p>Phone: (123) 456-7890</p>
+            <p>Phone: +383 46 456-789</p>
           </Col>
         </Row>
       </Container>
