@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import pharamcist2 from '../assets/img/doctor1.jpg';
-import pharamcist3 from '../assets/img/pharamcist/pharm4.jpg';
+import pharamcist2 from '../assets/img/pharm1.jpg';
+import pharamcist3 from '../assets/img/pharm2.jpg';
 
 function Slider() {
   return (
