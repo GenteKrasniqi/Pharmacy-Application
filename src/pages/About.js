@@ -1,7 +1,9 @@
 import React from 'react'
-import pharmacy from '../assets/img/aboutusimg.jpg'
+import pharmacy from '../assets/img/aboutusimgg.jpg' 
 import Services from '../components/Services'
 import Button from '../components/button';
+import BestSellers from '../components/Brand.js';
+import { Link } from 'react-router-dom';
 
 function About() {
 
@@ -16,7 +18,7 @@ function About() {
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
-    paddingBottom:'100px'
+    paddingBottom: '100px'
   }
 
   const textStyle = {
@@ -24,7 +26,7 @@ function About() {
     width: '580px',
     marginLeft: '80px',
     fontFamily: 'Roboto, sans-serif',
-    textAlign:'left'
+    textAlign: 'left'
   };
 
   const text = {
@@ -48,20 +50,27 @@ function About() {
   }
 
   return (
-    <div>
+    
+    <div className='hero-banner-about'>
       <div style={containerStyle}>
-        <img src={pharmacy} alt="Pharmacy" style={{ width: '600px', marginLeft: '60px', marginTop: '50px', height: 'auto', borderRadius:'10px' }} />
+        <img src={pharmacy} alt="Pharmacy" style={{ width: '600px', marginLeft: '60px', marginTop: '50px', height: 'auto', borderRadius: '10px' }} />
         <div style={textContainerStyle}>
           <p style={text}>About Us</p>
           <p style={textStyle}>Pharm Store, the place where we prioritize your well-being. Offering a diverse range of quality medications and personalized care, we are committed to enhancing your life through accessible and reliable healthcare solutions. Trust us for a healthier, happier tomorrow with compassionate service and professional advice.</p>
           <i class="bi bi-facebook"></i>
-          <Button title={'Contact >'}/>
+          <Link to="/contact-us">
+            <Button title={"Contact"} ></Button>
+          </Link>
         </div>
       </div>
       {/* Include the Services component */}
       <div style={ServicesStyle}>
         <h2 style={srvstyle}>Our Services</h2>
         <Services />
+      </div>
+
+      <div className='bestSeller'>
+        <BestSellers h3={'We proudly stock an extensive selection of the most renowned and sought-after brands in the market that are'}/>
       </div>
 
     </div>
