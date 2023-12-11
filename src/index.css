@@ -196,15 +196,19 @@
 }
 
 .txtHolder h3 {
+  font-family: monospace;
   white-space: nowrap;
   font-size: 52px;
   padding-bottom: 10px;
 }
 
 .txtHolder h6 {
-  font-size: 24px;
-  color: rgb(0, 128, 49);
-  margin-top: 0;
+  font-size: 34px;
+  font-family: monospace;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  margin-top: 130px;  
+  margin-bottom: 130px;
   padding-bottom: 20px;
 }
 

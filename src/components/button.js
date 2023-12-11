@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../src/index.css';
 
-function Button({title}) {
+function Button({type, title}) {
     return (
-        <button type="button" class="btn btn-outline-success">{title}</button>
+        <button type={type} class="btn btn-outline-success">{title}</button>
     );
 }
 

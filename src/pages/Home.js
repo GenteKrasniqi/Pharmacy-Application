@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from "../components/Banner.js";
-import BannerImage from "../assets/img/bgimgpharm.jpg";
+import BannerImage from '../assets/img/main-gif.webp';
 import Slider from '../components/Slider.js';
 import Representations from '../components/Brand.js';
 import Button from '../components/button';
