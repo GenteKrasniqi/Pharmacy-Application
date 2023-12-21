@@ -22,7 +22,7 @@ function About() {
 
   return (
     <><Banner img={pharmacy} h3={'About Pharm Store. Your Trusted Online Pharmacy '}
-      h6={'With a team of dedicated professionals, including 10 experienced pharmacists and a skilled cadre of technicians, we are committed to providing you with the highest quality pharmaceutical services. The team of pharmacists is always ready to offer expert advice and guidance on your medication needs. Scroll down for more detailed information for our services.'}
+      h6={'With a team of dedicated professionals, including 10 experienced pharmacists and a skilled cadre of technicians, we are committed to providing you with the highest quality pharmaceutical services.Scroll down for more detailed information for our services.'}
       p={'Feel Free To Ask Us About Our Pharmacy '}
 
       altAttr={"About-Text"}

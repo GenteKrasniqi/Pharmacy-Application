@@ -13,5 +13,4 @@ function Card({img,productTittle,productDesc,btn }) {
         </div>
     );
 }
-
 export default Card;

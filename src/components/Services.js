@@ -6,13 +6,12 @@ import info from '../assets/img/services2.jpg'
 import subs from '../assets/img/subs.jpg'
 import Button from './button';
 import { Link } from 'react-router-dom';
-function Services() {
 
+function Services() {
   const p1 = {
     fontSize: '22px',
     marginTop: '20px'
   }
-
 
   return (
     <Container>
