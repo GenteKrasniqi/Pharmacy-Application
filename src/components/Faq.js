@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import Box from '../components/Box.js';
 import AccordionFaq from './AccordionFaq';
 
 import './Faq.css';
@@ -54,11 +54,11 @@ const Faq = () => {
 
   return (
     <>
+        <Box h2={'Please Refer to this Accordion to Read the Answers of the Most Asked Questions'}/>
       <div className="container">
+
         <div className="containerFaq">
           <div className="containerFaqInside">
-            <h1>Please refer to this Accordion to Read the Frequently Asked Questions</h1>
-
             {questions.length ?
               questions.map((item, index) => {
                 return <AccordionFaq key={index} id={index} h3={item.h3} p={item.p} />;

@@ -1,11 +1,9 @@
 import React from 'react'
-import pharmacy from "../assets/img/bgimgpharm.jpg";
+import pharmacy from "../assets/img/about-us-img.jpg";
 import Services from '../components/Services'
-import Button from '../components/button';
 import BestSellers from '../components/Brand.js';
-import { Link } from 'react-router-dom';
-import Banner from '../components/Banner.js'
-
+import Banner from '../components/Banner.js';
+import Sub from '../components/Subscribe.js';
 function About() {
 
   const ServicesStyle = {
@@ -23,10 +21,13 @@ function About() {
   }
 
   return (
-    <><Banner img={pharmacy} h3={'About Us'}
-      h6={'Pharm Store, the place where we prioritize your well-being. Offering a diverse range of quality medications and personalized care, we are committed to enhancing your life through accessible and reliable healthcare solutions. Trust us for a healthier, happier tomorrow with compassionate service and professional advice. '}
+    <><Banner img={pharmacy} h3={'About Pharm Store. Your Trusted Online Pharmacy '}
+      h6={'With a team of dedicated professionals, including 10 experienced pharmacists and a skilled cadre of technicians, we are committed to providing you with the highest quality pharmaceutical services. The team of pharmacists is always ready to offer expert advice and guidance on your medication needs. Scroll down for more detailed information for our services.'}
+      p={'Feel Free To Ask Us About Our Pharmacy '}
+
       altAttr={"About-Text"}
-      title={'Contact'} />
+      title={'Contact'}  />
+  
       <div className='hero-banner-about'>
         <div style={ServicesStyle}>
           <h2 style={srvstyle}>Our Services</h2>
@@ -36,7 +37,7 @@ function About() {
         <div className='bestSeller'>
           <BestSellers h3={'We also proudly stock an extensive selection of the most renowned and sought-after brands in the market that are'} />
         </div>
-
+    <Sub/>
       </div></>
   )
 }

@@ -7,7 +7,7 @@ function Register() {
       <div style={{margin:'auto'}} >
         <div style={{ textAlign: "center" }} class='mt-5'>
           <h3>Welcome to Pharm Store, User!</h3>
-          <h5 class='mb-3'>Please Register to our Application here</h5></div>
+          <h5 class='mb-3'>Please Register to our Web Application here</h5></div>
         <div class="form-row"  >
           <div class="col-md-4  mb-3" style={{ width: "100%" }}>
             <label for="validationServer01">First name</label>

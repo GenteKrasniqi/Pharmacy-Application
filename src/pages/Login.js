@@ -47,7 +47,7 @@ function Login() {
     <div className="d-flex justify-content-center align-items-center vh-100">
       <form style={{ minWidth: "450px" }} action="/" method="POST" encType="multipart/form-data" onSubmit={onSubmitHandler}>
         <div class="form-group mb-4">
-          <h2 className='mb-4' >Please Log In here</h2>
+          <h2 className='mb-4'  style={{textAlign:"center"}} >Please Log In here</h2>
           <label for="exampleInputEmail1" className='mb-3'>Enter Email</label>
           <input type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value={logInForm.email} onChange={(e) => { setLogInForm({ ...logInForm, email: e.target.value }); }}  />
         </div>

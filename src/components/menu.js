@@ -11,7 +11,6 @@ function Menu() {
     setIsLoggedIn(null)
     navigate("/");
   }
-
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
@@ -20,9 +19,9 @@ function Menu() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto custom-menu">
             <NavLink to="/" className='menu-item nav-link'>Home</NavLink>
-            <NavLink to="/about" className='menu-item nav-link'>About Us</NavLink>
+            <NavLink to="/about" className='menu-item nav-link'>About</NavLink>
             <NavLink to="/products" className='menu-item nav-link'>Products</NavLink>
-            <NavLink to="/contact-us" className='menu-item nav-link'>Contact Us</NavLink>
+            <NavLink to="/contact-us" className='menu-item nav-link'>Contact</NavLink>
             {/* <NavLink to="/cart" className='menu-item nav-link'>Cart ({cart.length})</NavLink> */}
             <NavDropdown className='menu-item' title={(isLoggedIn == null) ? 'User' : isLoggedIn.email} id="basic-nav-dropdown">
               {

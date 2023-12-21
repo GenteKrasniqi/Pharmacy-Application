@@ -93,10 +93,13 @@
   text-align: center;
   font-weight: bold;
 }
-
+.inner-text p {
+  color:rgb(0, 128, 49);
+  font-weight: 400;
+}
 .slider-container p {
   width: 100%;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .custom-footer {
@@ -163,11 +166,14 @@
 }
 
 .minBanner {
-  margin-top: 50px;
   text-align: center;
   color: rgb(0, 128, 49);
 }
-
+.minBanner h2{
+padding: 35px;
+font-size: 24px;
+background-color: #DFE6DA;
+}
 .contentHolder {
   display: flex;
   flex-direction: column;
@@ -182,7 +188,7 @@
 .imgHolder img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit:fill;
 }
 
 .txtHolder {
@@ -196,21 +202,19 @@
 }
 
 .txtHolder h3 {
-  font-family: monospace;
-  white-space: nowrap;
-  font-size: 52px;
-  padding-bottom: 10px;
+  font-size: 42px;
+  padding-bottom: 10px; 
 }
 
 .txtHolder h6 {
-  font-size: 34px;
-  font-family: monospace;
+  font-size: 24px;
   color: rgb(0, 0, 0);
-  font-weight: 700;
   margin-top: 130px;  
   margin-bottom: 130px;
   padding-bottom: 20px;
 }
+
+
 
 .contantPharms {
   text-align: center;
@@ -329,4 +333,29 @@
   margin: 0 auto;
   max-width: 1310px;
   padding: 0 15px;
+}
+
+.subsHolder{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  margin-bottom: 100px;
+  padding-top: 40px;
+}
+.subsHolder h5{
+  padding-bottom: 20px;
+}
+
+.inputDiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.inputDiv input{
+  border-radius: 7px;
+  width: 280px;
+  padding: 5px;
+  margin-right: 20px;
 }
