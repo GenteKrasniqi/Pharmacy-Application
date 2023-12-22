@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 function Home() {
     return (
         <div>
-            <Banner img={BannerImage} h3={'Welcome to the newest Pharm Store'}
+            <Banner img={BannerImage}
                 h3={'Great Service. Lower Prices. Free Delivery.'}
                 h6={'Pharm Store is an independently owned pharmacy located in Prishtina, Kosovo. Our pharmacy is staffed by highly trained pharmacists and pharmacy technicians. Get to know us !'}
                 title={'View Products'} />
