@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Box from '../components/Box.js';
-import AccordionFaq from './AccordionFaq';
-
-import './Faq.css';
+import Accordion from './Accordion';
 
 const Faq = () => {
 
-
   const [questions, setQuestions] = useState([]);
 
-
   useEffect(() => {
-
 
     const responsesQuestions = {
       status: 200,
@@ -61,27 +56,16 @@ const Faq = () => {
           <div className="containerFaqInside">
             {questions.length ?
               questions.map((item, index) => {
-                return <AccordionFaq key={index} id={index} h3={item.h3} p={item.p} />;
+                return <Accordion key={index} id={index} h3={item.h3} p={item.p} />;
               })
               :
               <h3>There are not any questions !</h3>
             }
           </div>
-
-        </div>
-
-        
+        </div>        
       </div>
     </>
-
-
   );
-
-
-  
 }
-
-
-
 
 export default Faq;

@@ -4,11 +4,11 @@ import '../../src/index.css'
 import { Link } from 'react-router-dom';
 import React from 'react';
 
-const Banner = ({ img, h3, altAttr, h6, title, p, h1 }) => {
+const Banner = ({ img, h3, h6, title, p}) => {
     return (
         <div className="contentHolder">
             <div className="imgHolder">
-                <img src={img} alt={altAttr} />
+                <img src={img} />
             </div>
             <div className="txtHolder">
                 <h3>{h3}</h3>

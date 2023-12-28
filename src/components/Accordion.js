@@ -1,5 +1,5 @@
-import './AccordionFaq.css';
 import React from 'react';
+
 const AccordionFaq = ({ id, p, h3 }) => {
   return (
     <div className="tab">

@@ -14,8 +14,8 @@ function Slider() {
           style={{ objectFit: 'cover', maxHeight: '490px' }}
         />
         <Carousel.Caption>
-          <h5>Name Surname</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h5>John Doe</h5>
+          <p></p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -26,10 +26,8 @@ function Slider() {
           style={{ objectFit: 'cover', maxHeight: '490px' }}
         />
         <Carousel.Caption>
-          <h5>Name Surname</h5>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h5>Emily Gray</h5>
+          <p></p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
