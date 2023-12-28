@@ -4,6 +4,7 @@ import Services from '../components/Services'
 import BestSellers from '../components/Brand.js';
 import Banner from '../components/Banner.js';
 import Sub from '../components/Subscribe.js';
+
 function About() {
 
   const ServicesStyle = {
@@ -21,11 +22,9 @@ function About() {
   }
 
   return (
-    <><Banner img={pharmacy} h3={'About Pharm Store. Your Trusted Online Pharmacy '}
-      h6={'With a team of dedicated professionals, including 10 experienced pharmacists and a skilled cadre of technicians, we are committed to providing you with the highest quality pharmaceutical services.Scroll down for more detailed information for our services.'}
+    <><Banner img={pharmacy} h3={'Your Trusted Online Pharmacy '}
+      h6={'With a team of dedicated professionals, including 10 experienced pharmacists and a skilled cadre of technicians, we are committed to providing you with the highest quality pharmaceutical services.'}
       p={'Feel Free To Ask Us About Our Pharmacy '}
-
-      altAttr={"About-Text"}
       title={'Contact'}  />
   
       <div className='hero-banner-about'>
@@ -37,9 +36,9 @@ function About() {
         <div className='bestSeller'>
           <BestSellers h3={'We also proudly stock an extensive selection of the most renowned and sought-after brands in the market that are'} />
         </div>
-    <Sub/>
-      </div></>
-  )
+      <Sub/>
+    </div></>
+  );
 }
 
-export default About
+export default About;

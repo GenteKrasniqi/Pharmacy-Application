@@ -9,6 +9,7 @@ import Sub from '../components/Subscribe.js'
 import { Link } from 'react-router-dom';
 
 function Home() {
+    
     return (
         <div>
             <Banner img={BannerImage}
@@ -22,7 +23,6 @@ function Home() {
                     <div className='slider-holder'>
                         <Slider />
                     </div>
-
                     <div className="slider-text">
                         <h4>Meet the Pharm Store's Qualified Pharmacists </h4> <br></br>
                         <p>At Pharm Store, we take pride in our team of highly skilled and passionate professionals who are dedicated to providing exceptional service. Our diverse team brings a wealth of expertise and a commitment to excellence in every aspect of our work. Get to know the faces behind the service and discover the people who make Pharm Store stand out.</p>
@@ -35,6 +35,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            
             <Faq/>
             <Sub/>
         </div>
