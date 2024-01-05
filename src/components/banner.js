@@ -4,7 +4,7 @@ import '../../src/index.css'
 import { Link } from 'react-router-dom';
 import React from 'react';
 
-const Banner = ({ img, h3, h6, title, p}) => {
+const Banner = ({ img, h3, h6, title, p, link}) => {
     return (
         <div className="contentHolder">
             <div className="imgHolder">
@@ -14,7 +14,7 @@ const Banner = ({ img, h3, h6, title, p}) => {
                 <h3>{h3}</h3>
                 <h6>{h6}</h6>
                 <p>{p}</p>
-                <Link to={'/products'}>
+                <Link to={link}>
                     <Button title={title} />
                 </Link>
             </div>
