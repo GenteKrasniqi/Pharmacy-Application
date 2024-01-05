@@ -43,7 +43,7 @@ if (emailInput.email !== '' && emailRegex.test(emailInput.email)) {
       
       <h5>Subscribe to our newsletter for seasonal promotions, health news and savings</h5>
       <form className="inputDiv"  onSubmit={onSubmitHandler}>
-        <input type="text" placeholder="Enter Your Email"  value={emailInput.email} onChange={(e) => { setInput({ ...emailInput, email: e.target.value }); }} />
+        <input type="text" placeholder="Enter Your Email" value={emailInput.email} onChange={(e) => { setInput({ ...emailInput, email: e.target.value }); }} />
         <Button title='Subscribe'/>        
       </form>      
       <div className="outPut">
