@@ -1,33 +1,23 @@
-import { useState,useEffect } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Dashboard = () => {
+const SideBar = () => {
     const [role, setRole] = useState(null);
 
-    const [date, setDate] = useState(new Date());
 
     const logOut = () => {
         window.localStorage.clear();
         window.location.replace('/');
     }
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setDate(new Date());
-        }, 1000);
-
-        return () => {
-            clearInterval(timer);
-        };
-    }, []);
-
     return (
         <>
             <div className="header">                
-                <h6>Hi Admin, today date's is {date.toDateString()}  </h6>
-                <div className="textBox">                    
+                <div className="textBox">     
+                <Link to="/dashboard">
                     <p>Pharm Store Management</p>
+                </Link>               
                 </div>
                 <div className="dashboardNav">
                         <ul>                            
@@ -45,4 +35,4 @@ const Dashboard = () => {
     );
 }
 
-export default Dashboard;
+export default SideBar;
