@@ -40,7 +40,7 @@ const Footer = () => {
         </Row>
       </Container>
       <div className="footer-part text-center">
-        <p>@2023 Pharmacy Store. All rights reserved</p>
+        <p>@ {new Date().getFullYear()} Pharmacy Store. All rights reserved &#169;</p>
       </div>
     </footer>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Banner from "../components/Banner.js";
 import BannerImage from '../assets/video/giphy.gif';
 import Slider from '../components/Slider.js';
@@ -6,14 +7,13 @@ import Representations from '../components/Brand.js';
 import Button from '../components/button';
 import Faq from '../components/Faq.js';
 import Sub from '../components/Subscribe.js'
-import { Link } from 'react-router-dom';
 
 function Home() {
 
     return (
         <div>
             <Banner img={BannerImage}
-                h3={'Great Service. Lower Prices. Free Delivery.'}
+                h3={'Great Service. Lower Prices. Quality Products.'}
                 h6={'Pharm Store is an independently pharmacy located in Kosovo. Our pharmacy is staffed by highly trained pharmacists and pharmacy technicians. Get to know us !'}
                 title={'Explore Products'}
                 link={'/products'} />

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Card from '../components/card';
 import Box from '../components/Box.js';
 import ReactPaginate from 'react-paginate';
-import '../../src/index.css';
 
 // Http Request
 import { getProductReq } from '../Http/Requests';
@@ -11,7 +10,7 @@ function Products() {
   const [products, setProducts] = useState([]);
   const [pageNumber, setPageNumber] = useState(0);
   const productsPerPage = 9;
-  
+
   async function fetchData() {
     try {
       const result = await getProductReq();
@@ -59,20 +58,20 @@ function Products() {
           </div>
 
         </div>
+      <div className="pagination">
+        <ReactPaginate
+          previousLabel={<>&lt; Prev</>}
+          nextLabel={<>Next &gt;</>}
+          pageCount={pageCount}
+          onPageChange={changePage}
+          containerClassName={'paginationBttns'}
+          previousLinkClassName={'previousBttn'}
+          nextLinkClassName={'nextBttn'}
+          disabledClassName={'paginationDisabled'}
+          activeClassName={'paginationActive'}
+        />
       </div>
-        <div className="pagination">
-            <ReactPaginate
-              previousLabel={<>&lt; Prev</>}
-              nextLabel={<>Next &gt;</>}
-              pageCount={pageCount}
-              onPageChange={changePage}
-              containerClassName={'paginationBttns'}
-              previousLinkClassName={'previousBttn'}
-              nextLinkClassName={'nextBttn'}
-              disabledClassName={'paginationDisabled'}
-              activeClassName={'paginationActive'}
-            />
-          </div>
+      </div>
     </>
   );
 }

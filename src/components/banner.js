@@ -13,7 +13,6 @@ const Banner = ({ img, h3, h6, title, p, link}) => {
             <div className="txtHolder">
                 <h3>{h3}</h3>
                 <h6>{h6}</h6>
-                <p>{p}</p>
                 <Link to={link}>
                     <Button title={title} />
                 </Link>

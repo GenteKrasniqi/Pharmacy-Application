@@ -16,9 +16,7 @@ const Detail = ({ name, img, scndImg, thirdImg, description, price, discount, av
         <div className='hero-banner'>
             <section className="detail-section">
                 <div className="detail-image">
-                    <div className='imgMain'>
                         <img src={img} alt='Loading' />
-                    </div>
                 </div>
                 <div className="detail-desctiption">
                     <p> <b>About {name} : </b><br /><br />{description}</p>
@@ -45,8 +43,8 @@ const Detail = ({ name, img, scndImg, thirdImg, description, price, discount, av
                     </div>
                 </div>
             </section>
-            <Subscribe></Subscribe>
-        </div>
+        <Subscribe></Subscribe>  
+        </div>      
     </>
     )
 }

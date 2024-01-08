@@ -16,7 +16,7 @@ const Contact = () => {
     const onSubmitHandler = async (e) => {
         e.preventDefault();
 
-        const nameRegex = /^[a-zA-Z ]*$/;
+        const nameRegex = /^[\p{L}a-zA-Z ]*$/u;
         const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
         if (conactForm.fullName !== '' && nameRegex.test(conactForm.fullName) && conactForm.email !== '' && emailRegex.test(conactForm.email) && conactForm.adress !== '' && conactForm.msg !== '') {
@@ -25,7 +25,7 @@ const Contact = () => {
                 if ((await postContactForm(conactForm))) {
                     setTimeout(() => {
                         setContactForm({ fullName: '', email: '', adress: '', msg: '' });
-                        setSuccesMessage('Your message has been sent sucessfully and you will be texted soon!');
+                        setSuccesMessage('Your message has been sent sucessfully!');
                     }, 100);
                     setTimeout(() => {
                         setSuccesMessage(null);
@@ -44,68 +44,72 @@ const Contact = () => {
         <><>
 
             <Box h2={'How Can We Help You ?'} />
-                <div className='ContactContainer'>
-                    <div className="containerContat">
-                        <div className="contentContact">
-                            <div className="left">
-                                <div className="address d">
-                                    <div className="topic">&nbsp;&nbsp;&nbsp;<b>Pharm Store</b></div>
-                                    <div className="one">Kosovo Southeast Europe</div>
-                                </div>
-                                <div className="phone d">
-                                    <div className="topic">&nbsp;&nbsp;&nbsp;<b>Phone</b></div>
-                                    <div className="one">+383 46 456-789</div>
-                                </div>
+
+
+            <div className='ContactContainer'>
+                <div className="containerContat">
+                    <div className="contentContact">
+                        <div className="left">
+                            <div className="address d">
+                                <div className="topic">&nbsp;&nbsp;&nbsp;<b>Pharm Store</b></div>
+                                <div className="one">Kosovo Southeast Europe</div>
                             </div>
-                            <div className="right">
-                                <div className="topic-txt">Contact Us here</div><br />
-                                <p>
-                                    Our staff typically responds in minutes, feel free to get in touch with us!
-                                </p>
-
-                                <form action="/" method="POST" encType="multipart/form-data" onSubmit={onSubmitHandler}>
-                                    <div className="input-box">
-                                        <input id="contactName" name="fullName" type="text" placeholder="Full Name" value={conactForm.fullName} onChange={(e) => { setContactForm({ ...conactForm, fullName: e.target.value }); }} />
-                                    </div>
-
-                                    <div className="input-box ">
-                                        <input id="contactEmail" name="email" type="text" placeholder="Email" value={conactForm.email} onChange={(e) => { setContactForm({ ...conactForm, email: e.target.value }); }} />
-                                    </div>
-
-                                    <div className="input-box ">
-                                        <input id="contactAdress" name="adress" type="text" placeholder="Adress" value={conactForm.adress} onChange={(e) => { setContactForm({ ...conactForm, adress: e.target.value }); }} />
-                                    </div>
-
-                                    <div className="input-box message">
-                                        <textarea id="contactMessage" name="message" placeholder="Type your message / question here ... " value={conactForm.msg} onChange={(e) => { setContactForm({ ...conactForm, msg: e.target.value }); }}></textarea>
-                                    </div>
-
-                                    <Button type={'submit'} title={"Send"} ></Button>
-                                </form>
+                            <div className="phone d">
+                                <div className="topic">&nbsp;&nbsp;&nbsp;<b>Phone</b></div>
+                                <div className="one">+383 46 456-789</div>
                             </div>
                         </div>
-                        <div className="outPut">
-                            {contactError !== null ?
-                                <p className='ErrorMsg'>
-                                    {contactError}
-                                </p>
-                                :
-                                null}
+                        <div className="right">
+                            <div className="topic-txt">Get In Touch With Us</div><br />
+                            <p>
+                                Our staff typically responds in minutes, feel free to get in touch with us!
+                            </p>
 
-                            {succesMessage !== null ?
-                                <p className='SuccessMsg'>
-                                    {succesMessage}
-                                </p>
-                                :
-                                null}
+                            <form action="/" method="POST" encType="multipart/form-data" onSubmit={onSubmitHandler}>
+                                <div className="input-box">
+                                    <input id="contactName" name="fullName" type="text" placeholder="Full Name" value={conactForm.fullName} onChange={(e) => { setContactForm({ ...conactForm, fullName: e.target.value }); }} />
+                                </div>
+
+                                <div className="input-box ">
+                                    <input id="contactEmail" name="email" type="text" placeholder="Email" value={conactForm.email} onChange={(e) => { setContactForm({ ...conactForm, email: e.target.value }); }} />
+                                </div>
+
+                                <div className="input-box ">
+                                    <input id="contactAdress" name="adress" type="text" placeholder="Adress" value={conactForm.adress} onChange={(e) => { setContactForm({ ...conactForm, adress: e.target.value }); }} />
+                                </div>
+
+                                <div className="input-box message">
+                                    <textarea id="contactMessage" name="message" placeholder="Type your message / question here ... " value={conactForm.msg} onChange={(e) => { setContactForm({ ...conactForm, msg: e.target.value }); }}></textarea>
+                                </div>
+
+                                <Button type={'submit'} title={"Send"} ></Button>
+                            </form>
+                            <div className="outPut">
+                                {contactError !== null ?
+                                    <p className='ErrorMsg'>
+                                        {contactError}
+                                    </p>
+                                    :
+                                    null}
+
+                                {succesMessage !== null ?
+                                    <p className='SuccessMsg'>
+                                        {succesMessage}
+                                    </p>
+                                    :
+                                    null}
+                            </div>
                         </div>
                     </div>
-                </div><div className='faqndsubs'>
-                    <Faq />
-                    <div className='bestSeller'>
-                        <BestSellers h3={'Your favorite brands, all here!'} />
-                    </div>
+
                 </div>
+
+            </div><div className='faqndsubs'>
+                <Faq />
+                <div className='bestSeller'>
+                    <BestSellers h3={'Your favorite brands, all here!'} />
+                </div>
+            </div>
         </></>
     );
 }
