@@ -22,10 +22,10 @@ function About() {
   }
 
   return (
-    <><Banner img={pharmacy} h3={'Your Trusted Online Pharmacy '}
+    <><Banner img={pharmacy} h3={'Your Trusted Online Pharm Store  '}
       h6={'With a team of dedicated professionals, including 10 experienced pharmacists and a skilled cadre of technicians, we are committed to providing you with the highest quality pharmaceutical services.'}
-      p={'Feel Free To Ask Us About Our Pharmacy '}
-      title={'Contact'}  />
+      title={'Contact'}
+      link={'/contact-us'}  />
   
       <div className='hero-banner-about'>
         <div style={ServicesStyle}>
