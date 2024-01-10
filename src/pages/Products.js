@@ -58,7 +58,9 @@ function Products() {
           </div>
 
         </div>
-      <div className="pagination">
+     
+      </div>
+       <div className="pagination">
         <ReactPaginate
           previousLabel={<>&lt; Prev</>}
           nextLabel={<>Next &gt;</>}
@@ -70,7 +72,6 @@ function Products() {
           disabledClassName={'paginationDisabled'}
           activeClassName={'paginationActive'}
         />
-      </div>
       </div>
     </>
   );
