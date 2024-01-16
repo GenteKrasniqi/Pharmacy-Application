@@ -15,8 +15,7 @@ function Slider() {
         style={{ objectFit: 'cover', maxHeight: '490px' }}
       />
       <Carousel.Caption>
-        <h5>Pharmacist</h5>
-        <p></p>
+        <p>Years of Experience: 5</p>
       </Carousel.Caption>
     </Carousel.Item>
       <Carousel.Item>
@@ -27,8 +26,7 @@ function Slider() {
           style={{ objectFit: 'cover', maxHeight: '490px' }}
         />
         <Carousel.Caption>
-          <h5>Pharmacist</h5>
-          <p></p>
+        <p>Years of Experience: 4</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -39,8 +37,7 @@ function Slider() {
           style={{ objectFit: 'cover', maxHeight: '490px' }}
         />
         <Carousel.Caption>
-          <h5>Pharmacist</h5>
-          <p></p>
+        <p>Years of Experience: 7</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -51,8 +48,7 @@ function Slider() {
           style={{ objectFit: 'cover', maxHeight: '490px' }}
         />
         <Carousel.Caption>
-          <h5>Pharmacist</h5>
-          <p></p>
+        <p>Years of Experience: 12</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

@@ -38,7 +38,7 @@ const Dashboard = () => {
                                 <div className='imgofbox'>
                                     <img src={productIcon} alt="" />
                                 </div>
-                                <p>Mange Products to keep your store updated.</p>
+                                <p>Update your store by managing products.</p>
                             </div>
                         </Link>
 
@@ -70,12 +70,16 @@ const Dashboard = () => {
                                 <div className='imgofbox'>
                                     <img src={messsagesIcon} alt="" />
                                 </div>
-                                <p>Review your latest messages and assist your clients.</p>
+                                <p>Assist your clients by reviewing the latest messages.</p>
                             </div>
                         </Link>
                     </div>
 
-                    <p id='builtBy'>Built by UBT students : Gentë Krasniqi & Valmire Stublla</p>
+                    <div className='developedBy'>
+                        <p>Developed by</p>
+                        <p>Gentë Krasniqi & Valmire Stublla</p>
+                        <p>UBT - Prishtinë</p>
+                    </div>
                 </div>
 
             </div>
