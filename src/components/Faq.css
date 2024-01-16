@@ -1,0 +1,29 @@
+.containerFaq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: -1000px; */
+  }
+
+.containerFaqInside {
+  /* margin: 0 40px; */
+  width: 1300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.containerFaqInside h1 {
+  color: black;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.ContactContainer {
+  /* padding-bottom: 80px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffff;
+}
+
