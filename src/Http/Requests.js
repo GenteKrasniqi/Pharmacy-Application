@@ -306,7 +306,6 @@ const deleteProductReq = async (id) => {
       }
     };
 
-<<<<<<< Updated upstream
 const updateProduct = async (id, data) => {
   try {
     const response = await fetch(`https://localhost:7282/api/Products/${id}`, {
@@ -329,29 +328,7 @@ const updateProduct = async (id, data) => {
   }
 };
 
-const login = async (email,password) => {
-  try {
-    const response = await fetch(`https://localhost:7282/api/LogIn`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(email,password),
-    });
 
-    if (!response.ok) {
-      const errorMessage = await response.text();
-      throw new Error(`HTTP error! Status: ${response.status}, Message: ${errorMessage}`);
-    }
-
-    const result = await response.json();
-    return result;
-  } catch (error) {
-    console.error('Error during fetch:', error);
-    throw error;
-  }
-};
-=======
     const editAccordion = async (id, updatedAccordion) => {
       try {
         const apiUrl = `https://localhost:7282/api/Accordions/${id}`;
@@ -381,29 +358,7 @@ const login = async (email,password) => {
     
     
     
-    const updateProduct = async (id, data) => {
-      try {
-        const response = await fetch(`https://localhost:7282/api/Products/${id}`, {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        });
     
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-    
-        // Check if the response body is empty
-        const result = response.status === 204 ? null : await response.json();
-    
-        return result;
-      } catch (error) {
-        console.error('Error during fetch:', error);
-        throw error;
-      }
-    };
     
     
     const login = async (email,password) => {
@@ -428,7 +383,6 @@ const login = async (email,password) => {
         throw error;
       }
     };
->>>>>>> Stashed changes
 
 export {
     postContactForm ,
