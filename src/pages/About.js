@@ -2,7 +2,7 @@ import React from 'react'
 import pharmacy from "../assets/img/about-us-img.jpg";
 import Services from '../components/Services'
 import BestSellers from '../components/Brand.js';
-import Banner from '../components/Banner.js';
+import Banner from '../components/banner.js';
 import Sub from '../components/Subscribe.js';
 
 function About() {

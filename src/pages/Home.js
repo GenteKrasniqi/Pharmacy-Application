@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Banner from "../components/Banner.js";
+import Banner from "../components/banner.js";
 import BannerImage from '../assets/video/giphy.gif';
 import Slider from '../components/Slider.js';
 import Representations from '../components/Brand.js';

@@ -1,5 +1,5 @@
 import '../../src/index.css';
-import Button from '../components/button';
+import Button from './button';
 import '../../src/index.css'
 import { Link } from 'react-router-dom';
 import React from 'react';

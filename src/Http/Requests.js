@@ -183,6 +183,28 @@ const postProductReq = async (data) => {
       throw error;
   }
 };
+    
+const postAccordion = async (data) => {
+  try {
+      const response = await fetch(`https://localhost:7282/api/Accordions`, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      return result;
+  } catch (error) {
+      console.error('Error during fetch:', error);
+      throw error;
+  }
+};
 
 const getProductReq = async () => {
   try {
@@ -214,6 +236,26 @@ const getProductById = async (id) => {
       return result;
   } catch (error) {
       console.error('Error fetching message by ID:', error);
+  }
+
+  }
+const getAccordions = async () => {
+  try {
+      const response = await fetch(`https://localhost:7282/api/Accordions`, {
+          method: 'GET',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+      });
+
+      if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      return result;
+  } catch (error) {
+      console.error('Error during fetch:', error);
       throw error;
   }
 };
@@ -240,8 +282,31 @@ const deleteProductReq = async (id) => {
     console.error('Error during fetch:', error);
     throw error;
   }
-};
+}
+    const deleteAccordion = async (id) => {
+      try {
+          const apiUrl = `https://localhost:7282/api/Accordions/${id}`;
+    
+          const response = await fetch(apiUrl, {
+              method: 'DELETE',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+          });
+    
+          if (!response.ok) {
+              throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+    
+          const result = await response.json();
+          return result;
+      } catch (error) {
+          console.error('Error during fetch:', error);
+          throw error;
+      }
+    };
 
+<<<<<<< Updated upstream
 const updateProduct = async (id, data) => {
   try {
     const response = await fetch(`https://localhost:7282/api/Products/${id}`, {
@@ -286,6 +351,84 @@ const login = async (email,password) => {
     throw error;
   }
 };
+=======
+    const editAccordion = async (id, updatedAccordion) => {
+      try {
+        const apiUrl = `https://localhost:7282/api/Accordions/${id}`;
+    
+        const response = await fetch(apiUrl, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updatedAccordion),
+        });
+    
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+    
+        // Check if the response body is empty
+        const result = response.status === 204 ? null : await response.json();
+        console.log('Edit Accordion Result:', result);
+    
+        return result;
+      } catch (error) {
+        console.error('Error during fetch:', error);
+        throw error;
+      }
+    };
+    
+    
+    
+    const updateProduct = async (id, data) => {
+      try {
+        const response = await fetch(`https://localhost:7282/api/Products/${id}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+    
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+    
+        // Check if the response body is empty
+        const result = response.status === 204 ? null : await response.json();
+    
+        return result;
+      } catch (error) {
+        console.error('Error during fetch:', error);
+        throw error;
+      }
+    };
+    
+    
+    const login = async (email,password) => {
+      try {
+        const response = await fetch(`https://localhost:7282/api/Users`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(email,password),
+        });
+    
+        if (!response.ok) {
+          const errorMessage = await response.text();
+          throw new Error(`HTTP error! Status: ${response.status}, Message: ${errorMessage}`);
+        }
+    
+        const result = await response.json();
+        return result;
+      } catch (error) {
+        console.error('Error during fetch:', error);
+        throw error;
+      }
+    };
+>>>>>>> Stashed changes
 
 export {
     postContactForm ,
@@ -301,5 +444,9 @@ export {
     getProductById,
     deleteProductReq,
     updateProduct,
-    login
+    login,
+    deleteAccordion,
+    getAccordions,
+    postAccordion,
+    editAccordion
 };
