@@ -242,7 +242,6 @@ const deleteProductReq = async (id) => {
   }
 };
 
-
 const updateProduct = async (id, data) => {
   try {
     const response = await fetch(`https://localhost:7282/api/Products/${id}`, {
@@ -256,8 +255,6 @@ const updateProduct = async (id, data) => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
-
-    // Check if the response body is empty
     const result = response.status === 204 ? null : await response.json();
 
     return result;
@@ -267,10 +264,9 @@ const updateProduct = async (id, data) => {
   }
 };
 
-
 const login = async (email,password) => {
   try {
-    const response = await fetch(`https://localhost:7282/api/Users`, {
+    const response = await fetch(`https://localhost:7282/api/LogIn`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

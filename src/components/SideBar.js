@@ -4,9 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SideBar = () => {
-    const [role, setRole] = useState(null);
-
-
+    
     const logOut = () => {
         window.localStorage.clear();
         window.location.replace('/');
