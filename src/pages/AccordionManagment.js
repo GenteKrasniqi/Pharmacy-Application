@@ -22,12 +22,12 @@ const AccordionManagment = () => {
   };
 
   const handleDelete = async (id) => {
-    const confirmDelete = window.confirm('Are you sure you want to delete this accordion?');
+    const confirmDelete = window.confirm('Are you sure you want to delete this ?');
     if (confirmDelete) {
     try {
+      setAccordion(accordion.filter(accordion => accordion.id !== id));
       console.log(`Deleting accordion with ID: ${id}`);
       await deleteAccordion(id);
-      console.log(`Accordion with ID ${id} deleted successfully`);
       fetchData(); 
     } catch (error) {
       console.error('Error deleting accordion:', error);
@@ -83,10 +83,9 @@ const onSubmitHandler = async (e) => {
     <div className="dashboardHeroHolder">
       <DashboardLayout />
       <form className="dashboardForm" onSubmit={onSubmitHandler}>
-        <h2>FAQ Management</h2>
         <div className="formSection">
-          <h3>{editMode !== null ? 'Edit FAQ' : 'Add FAQ'}</h3>
           <div className="formRow">
+          <h3>{editMode !== null ? 'Edit FAQ' : 'Add FAQ'}</h3>
             <label className="label">
               Question:
               <textarea
@@ -103,11 +102,11 @@ const onSubmitHandler = async (e) => {
                 onChange={(e) => setAccordionForm({ ...accordionForm, answer: e.target.value })}
               />
             </label>
-            <button type="submit">{editMode !== null ? 'Save FAQ' : 'Add FAQ'}</button>
+            <button type="submit" className="btn btn-outline-success">{editMode !== null ? 'Save' : 'Add'}</button>
           </div>
         </div>
 
-        <div className="faqList">
+        <div className="tableHolder">
           <h3>FAQ List</h3>
           {accordion.map((item) => (
             <div key={item.id} className="faqItem">
@@ -118,8 +117,8 @@ const onSubmitHandler = async (e) => {
 
               <div className="faqCardContainer">
                 <div className="editButtons">
-                  <button onClick={() => handleEdit(item.id)}>Edit</button>
-                  <button onClick={() => handleDelete(item.id)}>Delete</button>
+                  <button onClick={() => handleEdit(item.id)} className="btn btn-outline-warning">Edit</button>
+                  <button onClick={() => handleDelete(item.id)} className="btn btn-outline-danger">Delete</button>
                 </div>
               </div>
             </div>

@@ -260,6 +260,20 @@ const getAccordions = async () => {
   }
 };
 
+const getAccordionById = async (id) => {
+  try {
+      const response = await fetch(`https://localhost:7282/api/Accordions/${id}`);
+      if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      const result = await response.json();
+      return result;
+  } catch (error) {
+      console.error('Error fetching message by ID:', error);
+      throw error;
+  }
+};
+
 const deleteProductReq = async (id) => {
   try {
     const apiUrl = `https://localhost:7282/api/Products/${id}`;
@@ -354,16 +368,12 @@ const updateProduct = async (id, data) => {
         console.error('Error during fetch:', error);
         throw error;
       }
-    };
-    
-    
-    
-    
-    
-    
+    };  
+       
+   
     const login = async (email,password) => {
       try {
-        const response = await fetch(`https://localhost:7282/api/Users`, {
+        const response = await fetch(`https://localhost:7282/api/LogIn`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -383,7 +393,6 @@ const updateProduct = async (id, data) => {
         throw error;
       }
     };
-
 export {
     postContactForm ,
     getContactMsg,
@@ -402,5 +411,6 @@ export {
     deleteAccordion,
     getAccordions,
     postAccordion,
-    editAccordion
+    editAccordion,
+    getAccordionById
 };

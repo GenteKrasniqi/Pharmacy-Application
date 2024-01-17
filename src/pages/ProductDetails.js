@@ -22,7 +22,7 @@ const ProductDetails = () => {
     fetchProduct();
   }, [productId]);
 
-  
+
   const formatDateTime = (dateTimeString) => {
     const options = {
       year: 'numeric',
@@ -32,10 +32,10 @@ const ProductDetails = () => {
       minute: 'numeric',
       hour12: true, 
     };
-  
+
     return new Date(dateTimeString).toLocaleString(undefined, options);
   };
-  
+
   return (
     <div className="detail-page">
       {product ? 

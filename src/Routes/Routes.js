@@ -11,6 +11,7 @@ import LogIn from "../pages/Login";
 import MainDashboard from "../pages/Dashboard.js";
 import MessagesManagement from "../pages/MessagesManagement.js";
 import SubscriptionsManagement from "../pages/SubscriptionsManagement.js";
+import Accordion from "../pages/AccordionManagment.js";
 import ProductsManagement from "../pages/ProductsManagement.js";
 import ProductDetails from "../pages/ProductDetails";
 
@@ -46,6 +47,7 @@ const Routes = () => {
         <Route path="/dashboard" element={<MainDashboard />} />
         <Route path="/dashboard/messages" element={<MessagesManagement />} />
         <Route path="/dashboard/subscriptions" element={<SubscriptionsManagement />} />
+        <Route path="/dashboard/accordion" element={<Accordion />} />
         <Route path="/dashboard/products" element={<ProductsManagement />} />
         <Route path="/products/:productId" element={<ProductDetails />} />
         </Switch>

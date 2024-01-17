@@ -25,9 +25,8 @@ const Dashboard = () => {
     return (
         <>
             <div className="header">                
-                <h6>Hi Admin, today date's is {date.toDateString()}  </h6>
                 <div className="textBox">                    
-                    <p>Pharm Store Management</p>
+                    <p><a href="/dashboard">Pharm Store Management</a></p>
                 </div>
                 <div className="dashboardNav">
                         <ul>                            
